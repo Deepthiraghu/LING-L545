@@ -6,21 +6,27 @@ Rhyming order : sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | sort | rev | uniq -c | sor
 Exercises with grep:
 
 * Upper case words: 127490
+
     sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -c '^[A-Z]'
 
 * Lower case words: 273397
+
     sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -c '^[a-z]'
 
 * 4-Letter words: 72783
+
     sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -c '^[A-Za-z][A-Za-z][A-Za-z][A-Za-z]$'
 
 * No vowel words: 9303
+
     sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -i -E -c '^[^aeiou]+$'
 
 * One syllabal words: 120501
+
     sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -i -E -c '^[^aeiou]*[aeiou][^aeiou]*$'
 
 * Two syllabal words: 71903
+
     sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -i -E -c '^[^aeiou]*[aeiou][^aeiou]*[aeiou][^aeiou]$'
 
 
