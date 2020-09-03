@@ -23,11 +23,11 @@ Exercises with grep:
 
 * One syllabal words: 120501
 
-    sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -i -E -c '^[^aeiou] *[aeiou][^aeiou]*$'
+    sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -i -E -c '^[^aeiou] * [aeiou][^aeiou] * $'
 
 * Two syllabal words: 71903
 
-    sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -i -E -c '^[^aeiou] *[aeiou][^aeiou] *[aeiou][^aeiou]$'
+    sed 's/[^a-zA-Z]\+/\n/g' < wiki.txt | grep -i -E -c '^[^aeiou] * [aeiou][^aeiou] * [aeiou][^aeiou]$'
 
 
 Exercises with sed:
