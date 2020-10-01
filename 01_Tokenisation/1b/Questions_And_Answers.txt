@@ -1,0 +1,20 @@
+SEGMENTATION
+
+1) In my opinion, segmenting sentences with semi-colon should depend on the context, because semi-colons may be used for different purposes. For example, semi-colon can be used to separate a list of items, e.g., "I need the weather statistics for the following cities: London, England; London, Ontario; Paris, France; Paris, Ontario; Perth, Scotland; Perth, Ontario.", which cannot be broken into individual sentences. When a semicolon is used as a conjunction between two sentences, then it makes sense to break that into two sentences (e.g. I ordered a cheeseburger for lunch; life’s too short for counting calories.). So it depends on the context.
+
+2) Elipsis can be treated as a single sentence. Whenever we encounter three continuous full stops, we can replace it with a space and consider it as a single sentence.
+
+3) If there is an exclamation or comma after the first word in the sentence, in most cases, it should not be a separate sentence. For example, if the sentence is "Hello! How are you?" or "Hello, how are you?", this can be considered as a single sentence.
+
+4) One challenge posed to the segmenter is that different language need a different type of segmenter. There are many languages which do not have sentence boundaries clearly defined. Also, they may use a variety of different symbols. These may be hard to handle using a common segmenter. We use space in English to mark word boundaries, but in many languages, words are clubbed together without spaces. This is another challenge. 
+
+
+TOKENIZATION
+
+1) Punctuations should be split from the token it goes with because in most cases, punctuations are used to define a sentence boundary and give a tone to the sentence (like declarative, interrogative, etc). It is essentially not associated with a character in the language and should not be a part of the morphene or token. 
+
+2) Abbreviations with space in them be should be written as a single token. Numerals like 134 000, which have spaces in between to indecate denomination, should also be considered as a single token. These type of words essentially reperesent one single entity, and so, they should be treated as a single token.
+
+3) A case suffix following punctuation should be split as a separate token. The punctuation before this suffix can be removed in most cases. A good example of this would be "Thomas, Jr.". Here, Thomas is one token, the comma inbetween can be removed and the suffix "Jr" can be considered as a separate token because this suffix is not derived from the tokens before. 
+
+4) Contractions and clitics should be two (or more) tokens. It would be better to preprocess such tokens to convert them into their expanded form (example don't into do not), and then tokenize it into two different tokens.
