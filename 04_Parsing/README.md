@@ -1,1 +1,1 @@
-Please find report in file - https://github.com/Deepthiraghu/LING-L545/blob/master/04_Parsing/report.md
+Please find report in file - https://github.com/Deepthiraghu/LING-L545/blob/master/04_Parsing/report.md and word order plot in file - https://github.com/Deepthiraghu/LING-L545/blob/master/04_Parsing/outputplot.png
