@@ -61,7 +61,7 @@ My implementation of the Max Match Algorithm is in the file [max_match_algo.py](
 python3 max_match_algo.py < ja_gsd-ud-train.conllu > max_match_output.txt 
 ```
 
-The output is stored in [max_match_output.txt](1a/tokenizer/max_match_output.txt)
+The output is stored in [max_match_output.txt](tokenizer/max_match_output.txt)
 
 ### Word Error Rate:
 
