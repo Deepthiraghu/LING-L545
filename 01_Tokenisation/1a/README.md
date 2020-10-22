@@ -3,7 +3,7 @@
 I used the corpus in one of the article bundles of enwiki, [enwiki-20200901-pages-articles2.xml-p30304p88444.bz2](https://dumps.wikimedia.org/enwiki/20200901/enwiki-20200901-pages-articles2.xml-p30304p88444.bz2) (213.6 MB). 
 Pragmatic segmenter is a rule-based segmenter, and Punkt is a stat-based segmenter. In the article that I have chosen, Pragmatic segmenter has 2444428 sentences and Punkt segmenter has 2503172 sentences. I have saved the first 50 sentences in each file for comparison.
 
-To see the difference between the two segmentation methods, I compared the two outputs ([pragmatic_segmenter.txt](1a/segmentation/pragmatic_segmenter.txt) and [punkt.txt](1a/segmentation/punkt.txt)) with the command  `diff -y -W 120 pragmatic_segmenter.txt punkt.txt`.
+To see the difference between the two segmentation methods, I compared the two outputs ([pragmatic_segmenter.txt](segmentation/pragmatic_segmenter.txt) and [punkt.txt](1a/segmentation/punkt.txt)) with the command  `diff -y -W 120 pragmatic_segmenter.txt punkt.txt`.
 
 ### Pragmatic Segmenter
 
@@ -55,7 +55,7 @@ Assuming all the differences in sentences is due to Punkt's wrong segmentation, 
 
 ## Tokenization
 
-My implementation of the Max Match Algorithm is in the file [max_match_algo.py](1a/tokenizer/max_match_algo.py). The program can be executed as:
+My implementation of the Max Match Algorithm is in the file [max_match_algo.py](tokenizer/max_match_algo.py). The program can be executed as:
 
 ```
 python3 max_match_algo.py < ja_gsd-ud-train.conllu > max_match_output.txt 
@@ -65,11 +65,11 @@ The output is stored in [max_match_output.txt](1a/tokenizer/max_match_output.txt
 
 ### Word Error Rate:
 
-The program to calculate WER can be found in the file [word_error_rate.py](1a/tokenizer/word_error_rate.py). The program can be executed as:
+The program to calculate WER can be found in the file [word_error_rate.py](tokenizer/word_error_rate.py). The program can be executed as:
 The word error rate was calculated by the below command:
 
 ```
 python3 word_error_rate.py reference.txt hypothesis.txt > word_error_rate.txt 
 ```
 
-The WER results ar stored in [word_error_rate.txt](1a/tokenizer/word_error_rate.txt). The results obtained are somewhere between 25% to 28%.
+The WER results ar stored in [word_error_rate.txt](tokenizer/word_error_rate.txt). The results obtained are somewhere between 25% to 28%.
