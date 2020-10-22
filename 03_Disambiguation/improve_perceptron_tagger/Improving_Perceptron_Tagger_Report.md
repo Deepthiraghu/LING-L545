@@ -3,9 +3,7 @@
 The evaluation result on the test data gave a score of 96.29 UPOS.
 
 Metrics    | Precision |    Recall |  F1 Score | AligndAcc
-
------------+-----------+-----------+-----------+-----------
-
+-----------|-----------|-----------|-----------|-----------
 UPOS       |     96.29 |     96.29 |     96.29 |     96.29
 
 
