@@ -1,0 +1,57 @@
+Alphabet
+  а ӑ е ё ӗ и о у ӳ ы э ю я б в г д ж з к л м н п р с ҫ т ф х ц ч ш щ й ь ъ b
+  А Ӑ Е Ё Ӗ И О У Ӳ Ы Э Ю Я Б В Г Д Ж З К Л М Н П Р С Ҫ Т Ф Х Ц Ч Ш Щ Й Ь Ъ
+  %{A%}:а %{A%}:е  %{Ă%}:ӑ %{Ă%}:ӗ %{Ă%}:0
+  %{м%}:м %{м%}:0
+  %>:0
+  %{ъ%}
+;
+
+Sets
+
+BackVow = ӑ а ы о у я ё ю %{ъ%} ;
+
+FrontVow = ӗ э и ӳ ;
+
+Cns = б в г д ж з к л м н п р с ҫ т ф х ц ч ш щ й ь ъ ;
+
+ArchiCns = %{м%} ;
+
+Rules
+
+"Remove morpheme boundary"
+%>:0 <=> _ ;
+
+"Back vowel harmony for archiphoneme {A}"
+%{A%}:а <=> BackVow: [ Cns: | %>: ]+ _ ;
+
+"Back vowel harmony for archiphoneme {Ă}"
+%{Ă%}:ӑ <=> BackVow: [ ArchiCns: | Cns: | %>: ]+ _ ;
+        except
+                                    %{м%}: %>:  _н ;
+                                    BackVow: %>: _ ;
+
+"Non surface {Ă} in plural genitive"
+%{Ă%}:0 <=> %{м%}: %>: _ н ;
+
+"The exercise to the reader"
+%{м%}:0 <=> _ %>: %{Ă%}: н ;
+
+"A to 0 after stem vowel"
+%{Ă%}:0 <=> BackVow: %>: _ ;
+
+"x is constrained to be y before a and after b"
+x:y <=>    _ :a ;
+        :b _ ;
+
+        "{A} must correspond to the vowel before it"
+        %{A%}:Vy <=> :Vx _ ;
+              where Vx in ( a e o )
+                    Vy in ( a e o )
+              matched ;
+
+"Vowels raise after a null-realised {x}"
+Vx:Vy <=> %{x%}:0 _ ;
+      where Vx in ( a e o )
+            Vy in ( ə i u )
+      matched ;

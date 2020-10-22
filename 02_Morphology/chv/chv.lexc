@@ -1,0 +1,71 @@
+Multichar_Symbols
+%<n%>                ! Noun
+%<pl%>               ! Plural
+%<nom%>              ! Nominative
+%<ins%>              ! Instrumental
+%>                   ! Morpheme boundary
+%{A%}                ! Archiphoneme [a] or [e]
+%<gen%>              ! Genitive
+%{м%}
+%{Ă%}
+
+LEXICON Root
+
+!Nouns ;
+Guesser ;
+
+LEXICON CASES
+
+%<ins%>:%>п%{A%} # ;
+%<gen%>:%>%{Ă%}н  # ;
+%<nom%>: # ;
+
+LEXICON PLURAL
+
+            CASES ;
+%<pl%>:%>се%{м%} CASES ;
+
+LEXICON N
+
+%<n%>: PLURAL ;
+%<n%>: SUBST ;
+%<n%>: DER-N ;
+
+LEXICON Nouns
+
+урам:урам N ;     ! "улица", "street"
+пахча:пахча N ;   ! "сад", "garden"
+хула:хула N ;     ! "город", "city"
+канаш:канаш N ;   ! "совет", "council"
+тӗс:тӗс N ;       ! "вид", "aspect"
+патша:патша N ;   ! "царь", "tsar"
+куҫ:куҫ N ;       ! "глаз", "eye"
+<<<<<<< HEAD
+<<<<<<< HEAD
+патшалӑх:патшалӑх N ; !"государство", "state"
+специалист:специалист%{ъ%} N ; ! "специалист"
+
+LEXICON SUBST
+
+PLURAL ;
+
+LEXICON DER-N
+
+%<der_лӑх%>:%>л%{Ă%}х SUBST "weight: 1.0" ;
+
+LEXICON N
+
+%<n%>: SUBST ;
+%<n%>: DER-N ;
+
+LEXICON Guesser
+LEXICON Root
+
+Guesser ;
+
+
+LEXICON Guesser
+
+🂡%<guess%>:🂡 N ;
+%<der_лӑх%>:%>л%{Ă%}х SUBST ;
+
