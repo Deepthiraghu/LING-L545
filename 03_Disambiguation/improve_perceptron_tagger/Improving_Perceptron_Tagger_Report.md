@@ -10,9 +10,7 @@ UPOS       |     96.29 |     96.29 |     96.29 |     96.29
 The evaluation result on the dev data gave a score of 96.57 UPOS.
 
 Metrics    | Precision |    Recall |  F1 Score | AligndAcc
-
------------+-----------+-----------+-----------+-----------
-
+-----------|-----------|-----------|-----------|-----------
 UPOS       |     96.57 |     96.57 |     96.57 |     96.57
 
 To improve this score, I tried to make various modifications in the _get_features() in tagger.py, some of which are: 
