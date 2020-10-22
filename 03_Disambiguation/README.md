@@ -1,4 +1,4 @@
-Please find Tagger Comparison report in file tagger_comparison/Tagger_Comparison_Report.md
+Please find Tagger Comparison report in file [a relative link]tagger_comparison/Tagger_Comparison_Report.md
 
 Please find additional rules for constraint grammar in file https://github.com/Deepthiraghu/LING-L545/blob/master/03_Disambiguation/constraint_grammar/rus.cg3
 
