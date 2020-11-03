@@ -6,7 +6,7 @@ Multichar_Symbols
 
 %<o_sg1%>	! Object 1st person singular
 %<o_sg2%>	! Object 2nd person singular
-%<o_sg3%>	! Object 3rd person singluar
+%<o_sg3%>	! Object 3rd person singular
 %<o_pl1%>	! Object 1st person plural
 %<o_pl2%>	! Object 2nd person plural
 %<o_pl3%>	! Object 3rd person plural
@@ -40,6 +40,7 @@ LEXICON Subject
 @S.Pl.3@:@S.Pl.3@ki Verbs ;
 
 LEXICON Object
+
 @O.S.1@:@O.S.1@in Subject ;
 @O.S.2@:@O.S.2@at Subject ;
 @O.S.3@:@O.S.3@ Subject ;
