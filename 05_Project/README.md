@@ -9,3 +9,5 @@ This project involves identification of the language from uncommon Indian langua
 * `deepspeech_transcribe.py` reads the wav audio files and transcribes it into English text. It produces the four text files `input_assamese.txt`, `input_odiya.txt`, `input_punjabi.txt`, `input_tamil.txt`, which are used as training data and the four text files `test_assamese.txt`, `test_odiya.txt`, `test_punjabi.txt`, `test_tamil.txt`, which are used as test data.
 
 * `Language_Identifier.ipynb` is the python notebook which consists of the n-gram model which has been trained to identify the language. This notebook consists of data preprocessing steps, the training, testing and accuracy calculation code.
+
+* `Final_Project_Paper.pdf` is the ACL style paper describing this project.
